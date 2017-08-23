@@ -13,10 +13,10 @@ class PostIndex extends Component {
   renderPosts() {
     return _.map(this.props.posts, post => {
       return (
-        <Link to={`/posts/${post.id}`} key={post.id}>
-          <li className="list-group-item">
-            Title: {post.title}
-          </li>
+        <Link to={`/posts/${post.id}`} key={post.id} className="list-group-item list-group-item-action">
+          Title: {post.title} <br />
+          Categories: {post.categories || 'None'} <br />
+          {parseInt(post.content.length) > 30 ? post.content.slice(0, 30) + '...' : post.content}
         </Link>
       );
     });
@@ -31,9 +31,9 @@ class PostIndex extends Component {
           </Link>
         </div>
         <h1>Posts</h1>
-        <ul className="list-group">
+        <div className="list-group">
           {this.renderPosts()}
-        </ul>
+        </div>
       </div>
     );
   }

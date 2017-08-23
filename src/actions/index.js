@@ -6,7 +6,7 @@ export const CREATE_POST = "CREATE_POST";
 export const DELETE_POST = "DELETE_POST";
 
 const ROOT_URL = "http://reduxblog.herokuapp.com/api";
-const API_KEY = "?key=MTR12";
+const API_KEY = "?key=MTR";
 
 // Action Creators
 export function fetchPost(id) {

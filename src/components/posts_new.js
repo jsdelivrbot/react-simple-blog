@@ -40,7 +40,7 @@ class PostsNew extends Component {
           <Field label="title" name="title" component={this.renderField} />
           <Field label="categories" name="categories" component={this.renderField} />
           <Field
-            label="post content"
+            label="content"
             name="content"
             component={this.renderField}
           />

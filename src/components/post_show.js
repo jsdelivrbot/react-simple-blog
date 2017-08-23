@@ -35,15 +35,17 @@ class PostShow extends Component {
         >
           Delete Post
         </button>
-        <h1>
-          {post.title}
-        </h1>
-        <p>
-          Catagories: {post.categories}
-        </p>
-        <p>
-          {post.content}
-        </p>
+        <article className="post">
+          <h1>
+            {post.title}
+          </h1>
+          <p className="catagories lead">
+            Catagories: {post.categories}
+          </p>
+          <p>
+            {post.content}
+          </p>
+        </article>
       </div>
     );
   }
